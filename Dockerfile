@@ -17,8 +17,8 @@ FROM openjdk:17-alpine
 
 WORKDIR /app
 
-COPY --from=builder /app/target/speaker_user.war .
+COPY --from=builder /app/target/speaker_admin.war .
 
 
-CMD ["java", "-jar", "speaker_user.war"]
+CMD ["java", "-jar", "speaker_admin.war"]
 
